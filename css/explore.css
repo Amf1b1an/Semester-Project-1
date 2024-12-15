@@ -187,60 +187,93 @@
     .hamburger-menu:has(input:checked) + .sidebar {
         translate: 0;
     }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    h1 {
+        padding: 15px;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 0;
+        color: #023028;
+        background-color: #abc5c7;
+
     }
-    .opacity-img {
+    main {
+        background: url("../img/will-min-min.jpg") center/cover no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+    .img {
         max-width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         position: relative;
-    }
-    .img {
+        font-size: 0.5rem;
         opacity: 0.5;
     }
-    .p-main-teachers {
-        position: absolute;
-        top: 60%; 
-        left: 35%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028;
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; 
+        max-width: 100%;
+        padding-left: 220px;
+        padding-right: 220px;
+        margin: 0;
     }
-    .p-main-kids {
-        position: absolute;
-        top: 40%; 
-        left: 40%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028; 
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion li{
+        list-style: none;
+        width: auto;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 15px; 
+        background: #023028;
+
     }
-    .p-main-research {
-        position: absolute;
-        top: 40%; 
-        left: 60%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028; 
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion li .col {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 500;
+        cursor: pointer;
+        color: #abc5c7;
+    }
+    .col::before{
+        content: 'READ MORE';
+        font-size: 1rem;
+        font-weight: 600;
+        color: #023028;
+        background-color: #abc5c7;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 5px;
+    }
+    .inp[type="checkbox"]{
+        display: none;
     }
 
-
-
+    .accordion .content {
+        color: #abc5c7;
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s, padding 0.5s;
+    }
+    .accordion .inp[type="checkbox"]:checked + .col + .content{
+        max-height: 800px;
+        padding: 10px 10px 20px;
+    }
+    .content img{
+        display: flex;
+        max-width: 100%;
+        height: auto;
+    }
+    .content {
+        font-size: 0.8rem;
+        line-height: 1px;
+    }
 
 
     footer {
@@ -471,61 +504,93 @@
     .hamburger-menu:has(input:checked) + .sidebar {
         translate: 0;
     }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
+    h1 {
+        padding: 15px;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 0;
+        color: #023028;
+        background-color: #abc5c7;
     }
-    .opacity-img {
-        
+    main {
+        background: url("../img/will-min-min.jpg") center/cover no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+    .img {
         max-width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         position: relative;
-        font-size: 1rem;
-    }
-    .img {
+        font-size: 0.5rem;
         opacity: 0.5;
     }
-    .p-main-teachers {
-        position: absolute;
-        top: 60%; 
-        left: 35%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028;
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; 
+        max-width: 100%;
+        padding-left: 120px;
+        padding-right: 120px;
+        margin: 0;
     }
-    .p-main-kids {
-        position: absolute;
-        top: 60%; 
-        left: 40%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028; 
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion li{
+        list-style: none;
+        width: auto;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 15px; 
+        background: #023028;
+
     }
-    .p-main-research {
-        position: absolute;
-        top: 40%; 
-        left: 60%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028; 
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion li .col {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 500;
+        cursor: pointer;
+        color: #abc5c7;
+    }
+    .col::before{
+        content: 'READ MORE';
+        font-size: 1rem;
+        font-weight: 600;
+        color: #023028;
+        background-color: #abc5c7;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 5px;
+    }
+    .inp[type="checkbox"]{
+        display: none;
     }
 
-
+    .accordion .content {
+        color: #abc5c7;
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s, padding 0.5s;
+    }
+    .accordion .inp[type="checkbox"]:checked + .col + .content{
+        max-height: 800px;
+        padding: 10px 10px 20px;
+    }
+    .content img{
+        display: flex;
+        max-width: 100%;
+        height: auto;
+    }
+    .content {
+        font-size: 0.8rem;
+        line-height: 1px;
+    }
 
 
 
@@ -774,58 +839,92 @@
     .hamburger-menu:has(input:checked) + .sidebar {
         translate: 0;
     }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    
+    h1 {
+        padding: 15px;
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 0;
+        color: #023028;
+        background-color: #abc5c7;
     }
-    .opacity-img {
-        
+    main {
+        background: url("../img/will-min-min.jpg") center/cover no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+    .img {
         max-width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         position: relative;
-        font-size: 0.8rem;
-    }
-    .img {
+        font-size: 0.5rem;
         opacity: 0.5;
     }
-    .p-main-teachers {
-        position: absolute;
-        top: 60%; 
-        left: 35%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028;
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; 
+        max-width: 100%;
+        padding-left: 75px;
+        padding-right: 75px;
+        margin: 0;
     }
-    .p-main-kids {
-        position: absolute;
-        top: 60%; 
-        left: 40%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028; 
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion li{
+        list-style: none;
+        width: auto;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 15px; 
+        background: #023028;
+
     }
-    .p-main-research {
-        position: absolute;
-        top: 40%; 
-        left: 70%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028; 
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion li .col {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 500;
+        cursor: pointer;
+        color: #abc5c7;
+    }
+    .col::before{
+        content: 'READ MORE';
+        font-size: 1rem;
+        font-weight: 600;
+        color: #023028;
+        background-color: #abc5c7;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 5px;
+    }
+    .inp[type="checkbox"]{
+        display: none;
+    }
+
+    .accordion .content {
+        color: #abc5c7;
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s, padding 0.5s;
+    }
+    .accordion .inp[type="checkbox"]:checked + .col + .content{
+        max-height: 800px;
+        padding: 10px 10px 20px;
+    }
+    .content img{
+        display: flex;
+        max-width: 100%;
+        height: auto;
+    }
+    .content {
+        font-size: 0.8rem;
+        line-height: 1px;
     }
 
 
@@ -941,6 +1040,7 @@
         width: 20px;
         align-items: center;
         color: white;
+        font-size: 1rem;
     }
 
     .nav-bar {
@@ -1082,59 +1182,95 @@
     .hamburger-menu:has(input:checked) + .sidebar {
         translate: 0;
     }
-    main {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+
+    h1 {
+        padding: 15px;
+        font-size: 1.8rem;
+        text-align: center;
+        margin: 0;
+        color: #023028;
+        background-color: #abc5c7;
     }
-    .opacity-img {
-        
+    main {
+        background: url("../img/will-min-min.jpg") center/cover no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+    .img {
         max-width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
         position: relative;
         font-size: 0.5rem;
-    }
-    .img {
         opacity: 0.5;
     }
-    .p-main-teachers {
-        position: absolute;
-        top: 60%; 
-        left: 35%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028;
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion {
+        display: flex;
+        justify-content: center;
+        flex-direction: column; 
+        max-width: 100%;
+        padding-left: 22px;
+        padding-right: 22px;
+        margin: 0;
     }
-    .p-main-kids {
-        position: absolute;
-        top: 60%; 
-        left: 40%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028; 
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion li{
+        list-style: none;
+        width: auto;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 15px; 
+        background: #023028;
+
     }
-    .p-main-research {
-        position: absolute;
-        top: 40%; 
-        left: 70%; 
-        transform: translate(-50%, -50%);  
-        background-color: #023028; 
-        color: white; 
-        padding: 20px; 
-        border-radius: 10px; 
-        text-align: center; 
-        max-width: 80%; 
+    .accordion li .col {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 10px;
+        font-size: 1.3rem;
+        text-align: center;
+        font-weight: 500;
+        cursor: pointer;
+        color: #abc5c7;
     }
+    .col::before{
+        content: 'READ MORE';
+        font-size: 1rem;
+        font-weight: 600;
+        color: #023028;
+        background-color: #abc5c7;
+        padding: 10px;
+        border-radius: 15px;
+        margin-bottom: 5px;
+    }
+    .inp[type="checkbox"]{
+        display: none;
+    }
+
+    .accordion .content {
+        color: #abc5c7;
+        padding: 0 10px;
+        line-height: 26px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s, padding 0.5s;
+    }
+    .accordion .inp[type="checkbox"]:checked + .col + .content{
+        max-height: 800px;
+        padding: 10px 10px 20px;
+    }
+    .content img{
+        display: flex;
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+    .content {
+        font-size: 0.8rem;
+        line-height: 1px;
+    }
+
     footer {
         max-width: 100%;
         width: 100%;
@@ -1183,4 +1319,4 @@
     .p-footer {
         font-size: 0.75rem;
     }
-}
+}   
