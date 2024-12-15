@@ -966,7 +966,7 @@
         --foreground: #abc5c7;
         --background: #023028;
         --hamburger-margin-height: 85px;
-        --hamburger-margin-right: 73px;
+        --hamburger-margin-right: 15px;
         --animation-timing: 200ms ease-in-out;
         --img-gallery-radius: 6%;
     }
@@ -977,7 +977,7 @@
         height: auto;
         display: flex;
         flex-direction: row;
-        justify-content:center;
+        justify-content:space-between;
         align-items: center;
         text-decoration: none;
         background-color: #023028;
